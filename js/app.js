@@ -11,18 +11,18 @@ window.onload = function() {
 
 //Targets the input fields and add them into books array
 
-let title = document.getElementById('title');
-let author = document.getElementById('author');
-let book = title + author;
 
-console.log(book);
 
 
 //Add button adds book to the Library's books array
  
 	const addButton = document.getElementById('add');
 	addButton.addEventListener('click', () => {
-		console.log(addButton);
+		let title = document.getElementById('title').value;
+		let author = document.getElementById('author').value;
+		let book = title + ', ' + author;
+
+		console.log(book);
 	});
 
 }
