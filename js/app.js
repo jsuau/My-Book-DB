@@ -16,8 +16,6 @@ let library = new Library();
 
 
 
-
-
 //Add button adds book to the Library's books array
 //Targets the input fields and add them into books array
 
@@ -27,17 +25,16 @@ let library = new Library();
 		let title = document.getElementById('title').value;
 		let author = document.getElementById('author').value;
 		library.addBook(new Book(title, author));
-		console.log(library);		
+		console.log(library);
 		
+		//appends the book to the DOM
 		let list = library.printList(library);
 		console.log(list);	
-		let ul = document.getElementById('list');
-		console.log(ul);
-		ul.appendChild(list);
-		
+		document.getElementById('list').appendChild(list);
 		
 		
 	});
+	
 
 }
 
