@@ -17,9 +17,22 @@ class Library {
         this.borrowers.push(borrower);
     }
 	
-	removeBook() {
+	removeBorrower() {
 		this.borrowers.pop();
 		
+	}
+	
+	/**
+	* Creates li elements to add to DOM's ul.
+	*/
+	
+	printList(library) {
+		let html = document.createElement('LI');
+		for (let i = 0; i < this.books.length; i+= 1) {
+			html.innerHTML = this.books[i].title + ', ' + this.books[i].author;
+			
+			}
+			return html;
 	}
 	
 }

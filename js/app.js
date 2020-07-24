@@ -9,20 +9,34 @@
 */
 window.onload = function() {
 
-//Targets the input fields and add them into books array
+//Creates a Library object
+
+let library = new Library();
+
+
 
 
 
 
 //Add button adds book to the Library's books array
+//Targets the input fields and add them into books array
+
  
 	const addButton = document.getElementById('add');
 	addButton.addEventListener('click', () => {
 		let title = document.getElementById('title').value;
 		let author = document.getElementById('author').value;
-		let book = title + ', ' + author;
-
-		console.log(book);
+		library.addBook(new Book(title, author));
+		console.log(library);		
+		
+		let list = library.printList(library);
+		console.log(list);	
+		let ul = document.getElementById('list');
+		console.log(ul);
+		ul.appendChild(list);
+		
+		
+		
 	});
 
 }
@@ -30,11 +44,3 @@ window.onload = function() {
 
 
 
-function printList(library) {
-let html = '';
-for (let i = 0; i < library.books.length; i+= 1) {
-	html += '<li>';
-	html += library.books[i].title + ', ' + library.books[i].author + '</li>';
-}
-return html;
-}
