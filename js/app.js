@@ -26,7 +26,7 @@ let library = new Library();
 		let author = document.getElementById('author').value;
 		library.addBook(new Book(title, author));
 		console.log(library);
-		
+		title.className = "capitalize";
 		//appends the book to the DOM
 		let list = library.printList(library);
 		console.log(list);	
