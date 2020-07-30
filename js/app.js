@@ -35,7 +35,6 @@ let library = new Library();
 		
 	});
 	
-
 }
 
 
