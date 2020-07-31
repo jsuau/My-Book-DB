@@ -1,7 +1,20 @@
-body {
+h1 {
+	margin-top: 2rem;
+}
+
+h2 {
 	margin-top: 1rem;
 }
 
 .list {
 	text-transform: capitalize;
+}
+
+.btn-danger {
+	margin-left: 0.3rem;
+	margin-bottom: 0.3rem;
+}
+
+.btn-success {
+	margin-top: 1rem;
 }
